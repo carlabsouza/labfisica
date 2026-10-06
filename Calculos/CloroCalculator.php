@@ -2,8 +2,7 @@
 
 class CloroCalculator
 {
-    public function classificar($cloro)
-    {
+    public function classificar($cloro) {
         if ($cloro < 0) {
             return "Valor inválido";
         }

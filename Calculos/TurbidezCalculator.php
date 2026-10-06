@@ -2,8 +2,7 @@
 
 class TurbidezCalculator
 {
-    public function classificar($turbidez)
-    {
+    public function classificar($turbidez) {
         if ($turbidez < 0) {
             return "Valor inválido";
         }

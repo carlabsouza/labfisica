@@ -6,8 +6,7 @@ require_once __DIR__ . '/../Calculos/CloroCalculator.php';
 
 class CloroCalculatorTest extends TestCase
 {
-    public function testCloroAbaixoDoMinimo()
-    {
+    public function testCloroAbaixoDoMinimo() {
         $calculadora = new CloroCalculator();
         $resultado = $calculadora->classificar(0.1);
         $this->assertEquals(
@@ -16,8 +15,7 @@ class CloroCalculatorTest extends TestCase
         );
     }
 
-    public function testCloroNoMinimoPermitido()
-    {
+    public function testCloroNoMinimoPermitido() {
         $calculadora = new CloroCalculator();
         $resultado = $calculadora->classificar(0.2);
         $this->assertEquals(
@@ -26,8 +24,7 @@ class CloroCalculatorTest extends TestCase
         );
     }
 
-    public function testCloroIdeal()
-    {
+    public function testCloroIdeal() {
         $calculadora = new CloroCalculator();
         $resultado = $calculadora->classificar(0.5);
         $this->assertEquals(
@@ -36,8 +33,7 @@ class CloroCalculatorTest extends TestCase
         );
     }
 
-    public function testCloroNoLimiteDoIdeal()
-    {
+    public function testCloroNoLimiteDoIdeal() {
         $calculadora = new CloroCalculator();
         $resultado = $calculadora->classificar(1.0);
         $this->assertEquals(
@@ -46,8 +42,7 @@ class CloroCalculatorTest extends TestCase
         );
     }
 
-    public function testCloroAcimaDoIdeal()
-    {
+    public function testCloroAcimaDoIdeal() {
         $calculadora = new CloroCalculator();
         $resultado = $calculadora->classificar(1.5);
         $this->assertEquals(
@@ -56,8 +51,7 @@ class CloroCalculatorTest extends TestCase
         );
     }
 
-    public function testCloroNoLimiteDeDois()
-    {
+    public function testCloroNoLimiteDeDois() {
         $calculadora = new CloroCalculator();
         $resultado = $calculadora->classificar(2.0);
         $this->assertEquals(
@@ -66,8 +60,7 @@ class CloroCalculatorTest extends TestCase
         );
     }
 
-    public function testCloroAcimaDoRecomendado()
-    {
+    public function testCloroAcimaDoRecomendado() {
         $calculadora = new CloroCalculator();
         $resultado = $calculadora->classificar(3.0);
         $this->assertEquals(
@@ -76,8 +69,7 @@ class CloroCalculatorTest extends TestCase
         );
     }
 
-    public function testCloroNoLimiteDeCinco()
-    {
+    public function testCloroNoLimiteDeCinco() {
         $calculadora = new CloroCalculator();
         $resultado = $calculadora->classificar(5.0);
         $this->assertEquals(
@@ -86,8 +78,7 @@ class CloroCalculatorTest extends TestCase
         );
     }
 
-    public function testCloroAcimaDeCinco()
-    {
+    public function testCloroAcimaDeCinco() {
         $calculadora = new CloroCalculator();
         $resultado = $calculadora->classificar(5.1);
         $this->assertEquals(
@@ -96,8 +87,7 @@ class CloroCalculatorTest extends TestCase
         );
     }
 
-    public function testCloroNegativo()
-    {
+    public function testCloroNegativo() {
         $calculadora = new CloroCalculator();
         $resultado = $calculadora->classificar(-1);
         $this->assertEquals(

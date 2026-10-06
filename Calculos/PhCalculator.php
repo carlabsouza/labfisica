@@ -2,8 +2,7 @@
 
 class PhCalculator
 {
-    public function classificar($ph)
-    {
+    public function classificar($ph) {
         if ($ph < 0 || $ph > 14) {
             return "Valor inválido";
         }
