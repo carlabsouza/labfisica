@@ -1,6 +1,6 @@
 <?php
 
-class Qualidadedaagua
+class QualidadedaaguaCalculator
 {
     public function analisar($ph, $turbidez, $cloro, $dureza, $temperatura) {
         $resultados = [];

@@ -9,10 +9,10 @@ require_once __DIR__ . '/../Calculos/DurezaCalculator.php';
 require_once __DIR__ . '/../Calculos/TemperaturaCalculator.php';
 require_once __DIR__ . '/../Calculos/QualidadedaaguaCalculator.php';
 
-class QualidadedaaguaCalculatorTest extends TestCase {
+class QualidadedaaguaCalculatorCalculatorTest extends TestCase {
     
     public function testAguaAdequadaParaConsumo() {
-        $analisador = new Qualidadedaagua();
+        $analisador = new QualidadedaaguaCalculator();
 
         $resultado = $analisador->analisar(7.0, 0.5, 0.5, 40, 20);
 
@@ -23,7 +23,7 @@ class QualidadedaaguaCalculatorTest extends TestCase {
     }
 
     public function testAguaInadequadaPorPh() {
-        $analisador = new Qualidadedaagua();
+        $analisador = new QualidadedaaguaCalculator();
 
         $resultado = $analisador->analisar(5.0, 0.5, 0.5, 40, 20);
 
@@ -34,7 +34,7 @@ class QualidadedaaguaCalculatorTest extends TestCase {
     }
 
     public function testAguaInadequadaPorTurbidez() {
-        $analisador = new Qualidadedaagua();
+        $analisador = new QualidadedaaguaCalculator();
 
         $resultado = $analisador->analisar(7.0, 6.0, 0.5, 40, 20);
 
@@ -45,7 +45,7 @@ class QualidadedaaguaCalculatorTest extends TestCase {
     }
 
     public function testAguaInadequadaPorCloro() {
-        $analisador = new Qualidadedaagua();
+        $analisador = new QualidadedaaguaCalculator();
 
         $resultado = $analisador->analisar(7.0, 0.5, 5.5, 40, 20);
 
@@ -56,7 +56,7 @@ class QualidadedaaguaCalculatorTest extends TestCase {
     }
 
     public function testRetornaResultadosDosParametros() {
-        $analisador = new Qualidadedaagua();
+        $analisador = new QualidadedaaguaCalculator();
 
         $resultado = $analisador->analisar(7.0, 0.5, 0.5, 40, 20);
 
